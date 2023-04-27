@@ -14,7 +14,7 @@ services:
     restart: always
     container_name: ${PROJECT}_php_fpm
     env_file:
-      - ./docker_env
+      - ./docker/docker-compose/docker_env
     environment:
       PHP_IDE_CONFIG: "serverName=docker"
       XDEBUG_SESSION: PHPSTORM
@@ -37,7 +37,7 @@ services:
     restart: always
     container_name: ${PROJECT}_nginx
     env_file:
-      - ./docker_env
+      - ./docker/docker-compose/docker_env
     environment:
       DOMEN_2_LEVEL: ${DOMEN_2_LEVEL}
     depends_on:

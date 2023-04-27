@@ -1,10 +1,10 @@
-include docker_env
+include ./docker/docker-compose/docker_env
 
 ## Объединяет все env файлы в одну команду
-ENV_COMMAND = --env-file=./docker_env
+ENV_COMMAND = --env-file=./docker/docker-compose/docker_env
 
 ## Объединяет все docker-compose файлы в одну команду 
-FILE_COMMAND = -f docker-compose.yml
+FILE_COMMAND = -f ./docker/docker-compose/docker-compose.yml
 
 ## Устанавливаем рабочую директорию
 PD_COMMAND = --project-directory ./
