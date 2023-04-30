@@ -33,6 +33,9 @@ RUN /tmp/php_scripts/install_composer.sh
 # Устанавливаем mhsendmail
 RUN /tmp/php_scripts/install_mhsendmail.sh
 
+# Устанавливаем nodejs и npm
+RUN /tmp/php_scripts/install_nodejs_npm.sh
+
 ARG XDEBUG_REMOTE_HOST
 ARG XDEBUG_REMOTE_PORT
 ARG MAILHOG_IP
